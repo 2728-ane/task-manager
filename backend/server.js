@@ -20,7 +20,7 @@ mongoose
     });
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "../frontend")));
+app.use(express.static(path.join(__dirname, "frontend")));
 
 // Temporary tasks
 
@@ -83,7 +83,7 @@ app.delete("/api/tasks/:id", async (req, res) => {
 
 // Home route
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../frontend/index.html"));
+   res.sendFile(path.join(__dirname, "frontend/index.html")); 
 });
 
 // Start server
